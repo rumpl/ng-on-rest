@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "jasmine"
+    ],
+    "lib": [
+      "dom",
+      "es6",
+      "es2016.array.include"
+    ]
+  },
+  "files": [
+    "./src/index.ts"
+  ],
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "genDir": "dist",
+    "skipMetadataEmit": false,
+    "strictMetadataEmit": true
+  }
+}

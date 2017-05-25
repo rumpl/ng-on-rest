@@ -1,0 +1,63 @@
+{
+  "name": "ng-on-rest",
+  "version": "0.0.1-alpha.0",
+  "description": "REST admin back office bootstraper",
+  "main": "bundles/index.js",
+  "module": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && ngc && webpack && npm run docs && cp -a -f package.json docs dist/src/. dist/ && rm -rf dist/src",
+    "docs": "typedoc --options typedoc.json src/index.ts",
+    "lint": "tslint \"src/**/*.ts\" \"test/**/*.ts\" \"*.js\"",
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:paulsouche/ng-on-rest.git"
+  },
+  "keywords": [
+    "angular",
+    "REST",
+    "admin",
+    "back office"
+  ],
+  "author": "Paul Souche <paul.souche@gmail.fr>",
+  "license": "MIT",
+  "types": "index.d.ts",
+  "bugs": {
+    "url": "https://github.com/paulsouche/ng-on-rest/issues"
+  },
+  "homepage": "https://github.com/paulsouche/ng-on-rest#readme",
+  "dependencies": {
+    "@angular/animations": "^4.0.0",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/platform-server": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "rxjs": "^5.0.0",
+    "zone.js": "^0.8.0"
+  },
+  "devDependencies": {
+    "@ngtools/webpack": "^1.0.0",
+    "@types/jasmine": "*",
+    "core-js": "^2.0.0",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "jasmine-core": "^2.0.0",
+    "karma": "^1.0.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.0.0",
+    "karma-jasmine": "^1.0.0",
+    "karma-mocha-reporter": "^2.0.0",
+    "karma-remap-istanbul": "^0.6.0",
+    "karma-sourcemap-loader": "^0.3.0",
+    "karma-webpack": "^2.0.0",
+    "ts-loader": "^2.0.0",
+    "tslint": "^5.0.0",
+    "typedoc": "^0.7.0",
+    "typescript": "^2.0.0",
+    "webpack": "^2.0.0"
+  }
+}
