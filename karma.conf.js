@@ -1,4 +1,5 @@
 var webpackConfig = require('./webpack.config');
+var isWin = require('os').platform().indexOf('win') > -1;
 
 module.exports = (cfg) => {
   var config = {
@@ -6,7 +7,7 @@ module.exports = (cfg) => {
     basePath: '',
     browserDisconnectTolerance: 2,
     browserNoActivityTimeout: 100000,
-    browsers: ['Chrome'],
+    browsers: isWin ? ['Chrome']: ['PhantomJS'],
     colors: true,
     coverageReporter: {
       dir: 'coverage/',
